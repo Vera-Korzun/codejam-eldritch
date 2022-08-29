@@ -1,7 +1,12 @@
-import { setAncients } from "./js/getAncient"
+import { setAncients } from "./js/getAncient";
+import { difficultyLevel } from "./js/difficultyLevel";
 
+//setAncients();
+// difficultyLevel();
 
-console.log("Hello");
+const initialisation = () => {
+  setAncients();
+  difficultyLevel();
+};
 
-
-setAncients();
+initialisation();

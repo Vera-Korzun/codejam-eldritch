@@ -46,30 +46,30 @@ button {
   padding: 0;
 }
 
-.ancient-cart {
+.ancient-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 100px 150px;
 }
 
-.ancient-cart-btn {
+.ancient-card-btn {
 outline: none;
 border: none;
 transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.ancient-cart-btn:hover {
+.ancient-card-btn:hover {
   transform: scale(1.1);
 }
 
-.ancient-cart-img {
+.ancient-card-img {
 /* width: 300px; */
 height: 300px;
 }
 
-.ancient-cart-btn.active{
+.ancient-card-btn.active{
   transform: scale(1.1);
 }
 

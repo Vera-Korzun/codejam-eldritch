@@ -1,5 +1,6 @@
 import difficulties from "../data/difficulties.js";
-import { setLevel } from "./openLevel";
+//import { setLevel } from "./openLevel";
+import { setMixBtn } from "./setMixBtn";
 const getCart = document.querySelector(".ancient-card");
 const getLevelsList = document.querySelector(".levels-list");
 
@@ -16,6 +17,9 @@ const currentItem = (event) => {
 };
 
 const showLevels = (n) => {
+  document.querySelector(".stages-list").innerHTML = "";
+  document.querySelector(".mixDeckBtn").classList.add("hidden");
+  document.querySelector(".deckBtn").classList.add("hidden");
   getLevelsList.innerHTML = "";
   const getCartItems = document.querySelectorAll(".ancient-card-btn");
   const getCartItemsArr = Array.from(getCartItems);
@@ -32,14 +36,15 @@ const showLevels = (n) => {
     creatListItemBtn.innerHTML = `${item.id}`;
     creatListItem.classList.add("levels-list-item");
     creatListItemBtn.classList.add("levels-list-btn");
-    
+
     creatListItemBtn.onclick = function () {
-      setLevel(n,idx);
+      //setLevel(n, idx);
+      setMixBtn(n, idx);
     };
 
     getLevelsList.append(creatListItem);
     creatListItem.append(creatListItemBtn);
   });
 
-  console.log("getLevelsList", getLevelsList);
+  //console.log("getLevelsList", getLevelsList);
 };

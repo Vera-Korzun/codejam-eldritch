@@ -2,20 +2,23 @@ import ancientsData from "../data/ancients";
 import greenCards from "../data/mythicCards/green/index";
 import blueCards from "../data/mythicCards/blue/index";
 import brownCards from "../data/mythicCards/brown/index";
-import { setNormal } from "./setNormal";
+import { setStages } from "./setStages";
 
 export const setLevel = (ancientIdx, difficultyIdx) => {
   if (difficultyIdx == 2) {
-    let deck = generateNormalDeck(ancientIdx, getCards);
-    console.log("deck2", deck);
+      let deck = generateNormalDeck(ancientIdx, getCards);
+      setStages(deck, ancientIdx);
+    //console.log("deck2", deck);
   }
   if (difficultyIdx == 0) {
-    let deck = generateSuperEasyDeck(ancientIdx);
-    console.log("deck0", deck);
+      let deck = generateSuperEasyDeck(ancientIdx);
+       setStages(deck, ancientIdx);
+    //console.log("deck0", deck);
   }
   if (difficultyIdx == 1) {
-    let deck = generateEasyDeck(ancientIdx);
-    console.log("deck0", deck);
+      let deck = generateEasyDeck(ancientIdx);
+       setStages(deck, ancientIdx);
+    //console.log("deck0", deck);
   }
 };
 
@@ -78,10 +81,10 @@ const generateSuperEasyDeck = (ancientIdx) => {
       blueCards.filter((card) => card.difficulty === "normal")
     )
   );
-  console.log(
-    "filtered",
-    brownCards.filter((card) => card.difficulty === "normal")
-  );
+  //   console.log(
+  //     "filtered",
+  //     brownCards.filter((card) => card.difficulty === "normal")
+  //   );
   arrayOfCards.push(
     ...getSuperEasyCards(
       brownCardsTotal,

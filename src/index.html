@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My JS App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div>
-        <ul class="list ancient-card"></ul>
+      <ul class="list ancient-card"></ul>
     </div>
     <div class="play-board">
-        <div class="levels">
-            <ul class="list levels-list"></ul>
-        </div>
-        <div>
-            <ul class="cards"></ul>
-            <button>Mix your cards</button>
-
-        </div>
+        <ul class="list levels-list"></ul>
+        <!-- <ul class="cards"></ul> -->
+        <button class="mixDeckBtn hidden">Mix your cards</button>
         <div class="stages">
             <ul class="list stages-list"></ul>
-
         </div>
-        
+        <button class="deckBtn hidden"></button>
+        <div class="openDeck"></div>
     </div>
-    
-</body>
+  </body>
 </html>

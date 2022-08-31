@@ -50,14 +50,15 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 100px 150px;
+  padding: 60px 150px;
 }
 
 .ancient-card-btn {
 outline: none;
 border: none;
-transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+/* transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .ancient-card-btn:hover {
@@ -71,12 +72,21 @@ height: 300px;
 
 .ancient-card-btn.active{
   transform: scale(1.1);
+-webkit-box-shadow: 1px 0px 19px 10px rgba(246, 244, 244, 0.5);
+  -moz-box-shadow: 1px 0px 19px 10px rgba(246, 244, 244, 0.5);
+  box-shadow: 1px 0px 19px 10px rgba(246, 244, 244, 0.5);
 }
 
 .play-board {
   display: flex;
   flex-direction: row;
-  padding-left: 150px;
+  align-items: center;
+  padding: 50px 150px;
+  height: 205px;
+}
+
+.levels-list {
+  margin-left: 100px;
 }
 
 .levels-list-item {
@@ -105,4 +115,91 @@ height: 300px;
 
 .levels-list-btn.active {
   transform: scale(1.3);
+}
+
+.deck {
+  display: flex;
+  margin-left: 100px;
+}
+
+.mixDeckBtn.hidden {
+  display: none;
+ 
+}
+
+.mixDeckBtn {
+  display: block;
+  margin-left: 100px;
+  height: 35px;
+  padding: 10px 10px;
+    color: white;
+    background-color: #482d4c;
+    border-radius: 15px;
+    border: none;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mixDeckBtn:hover {
+  transform: scale(1.3);
+}
+
+.stages {
+  margin-left: 100px;
+}
+
+.deckBtn.hidden {
+  display: none;
+}
+
+.deckBtn {
+  display: block;
+    margin-left: 100px;
+    border: none;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.deckBtn-img {
+height: 300px;
+}
+
+.stages-list-item {
+  color: white;
+      text-align: center;
+}
+
+.stages-list-item:not(:last-child) {
+margin-bottom: 20px;
+}
+
+.cards-amount {
+  display: flex;
+  flex-direction: row;
+}
+
+.cards-amount-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.cards-amount-item:first-child {
+background: rgb(97, 165, 97);
+}
+
+.cards-amount-item:nth-child(2) {
+  background: rgb(165, 136, 97);
+}
+
+.cards-amount-item:nth-child(3) {
+  background: rgb(97, 129, 165);
+}
+
+.cards-amount-item:not(:last-child) {
+  margin-right: 10px;
 }

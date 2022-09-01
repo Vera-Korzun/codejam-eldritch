@@ -1,12 +1,8 @@
 import ancientsData from "../data/ancients";
-//const stageArray = ["First stage", "Second stage", "Third stage"];
 
-export const setStages = (array, idx) => {
-  // console.log("ancientsData", ancientsData); //list of ancients quality
+export const setStages = (idx) => {
+   const getStagesList = document.querySelector(".stages-list");
 
-  const getStagesList = document.querySelector(".stages-list");
-  // stageArray.forEach((category, i) => {
-  //   console.log("ancientsData[idx]", ancientsData[idx]);
   getStagesList.innerHTML = `
       <li class="stages-list-item" >First stage
       <ul class="list cards-amount"> 
@@ -30,8 +26,4 @@ export const setStages = (array, idx) => {
       </ul>
       </li>
       `;
-  // });
-
-  //console.log("array", array);
-  //console.log("idx", idx);
 };

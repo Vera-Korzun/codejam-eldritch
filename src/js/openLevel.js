@@ -7,18 +7,18 @@ import { setStages } from "./setStages";
 export const setLevel = (ancientIdx, difficultyIdx) => {
   if (difficultyIdx == 2) {
       let deck = generateNormalDeck(ancientIdx, getCards);
-      setStages(deck, ancientIdx);
-    //console.log("deck2", deck);
+      setStages(ancientIdx);
+    console.log("deck2", deck);
   }
   if (difficultyIdx == 0) {
       let deck = generateSuperEasyDeck(ancientIdx);
-       setStages(deck, ancientIdx);
-    //console.log("deck0", deck);
+       setStages(ancientIdx);
+    console.log("deck0", deck);
   }
   if (difficultyIdx == 1) {
       let deck = generateEasyDeck(ancientIdx);
-       setStages(deck, ancientIdx);
-    //console.log("deck0", deck);
+       setStages(ancientIdx);
+    console.log("deck0", deck);
   }
 };
 
@@ -30,7 +30,6 @@ export const generateNormalDeck = (ancientIdx) => {
   let arrayOfCards = getCards(greenCardsTotal, greenCards);
   arrayOfCards.push(...getCards(blueCardsTotal, blueCards));
   arrayOfCards.push(...getCards(brownCardsTotal, brownCards));
-  //setNormal(arrayOfCards, ancientIdx);
   return arrayOfCards;
 };
 
@@ -81,10 +80,6 @@ const generateSuperEasyDeck = (ancientIdx) => {
       blueCards.filter((card) => card.difficulty === "normal")
     )
   );
-  //   console.log(
-  //     "filtered",
-  //     brownCards.filter((card) => card.difficulty === "normal")
-  //   );
   arrayOfCards.push(
     ...getSuperEasyCards(
       brownCardsTotal,

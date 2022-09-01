@@ -1,4 +1,3 @@
-import ancientsList from "../assets/Ancients/index";
 import ancientsData from "../data/ancients";
 const getList = document.querySelector(".ancient-card");
 
